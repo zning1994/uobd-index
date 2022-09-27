@@ -7,6 +7,7 @@
 * [MyUoB](https://myuob.bham.ac.uk/)
 * [Canvas](https://canvas.bham.ac.uk/)
 * [Dubai Timetables](https://dubaitimetables.bham.ac.uk/)
+* [IT Service Desk](https://universityofbirmingham.service-now.com/itportal/)
 
 ## [UoB Intranet](https://intranet.birmingham.ac.uk/)
 
