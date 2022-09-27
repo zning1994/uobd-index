@@ -6,4 +6,7 @@ enforce_ssl: index.uobd.zning.me
 timezone: Asia/Dubai
 author: ZNing
 
+plugins:
+  - jekyll-feed
+
 google_analytics: G-MTYH758FNF
