@@ -17,3 +17,11 @@
 * [UoB Intranet - Library Services](https://intranet.birmingham.ac.uk/as/libraryservices/library/index.aspx)
 * [UoB Intranet - Digital services for students](https://intranet.birmingham.ac.uk/student/digital-services/index.aspx)
 * [UoB Intranet - Course and module administration](https://intranet.birmingham.ac.uk/student/digital-services/administration.aspx)
+
+
+## Accommodation
+
+* [The MyRiad Dubai - Linktree](https://linktr.ee/TMDResidents)
+* [The MyRiad Dubai - Weekday Bus](https://qrco.de/TMDWeekdayBusSchedule)
+* [The MyRiad Dubai - Weekend Bus](https://qrco.de/TMDWeekendBusSchedule)
+* [The MyRiad Dubai - Bistro Menu](https://qrco.de/MyBistroMenu)
