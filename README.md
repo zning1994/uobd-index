@@ -8,10 +8,10 @@
 * [Canvas](https://canvas.bham.ac.uk/)
 * [LibGuides](https://libguides.bham.ac.uk/)
 * [Dubai Timetables](https://dubaitimetables.bham.ac.uk/)
-* [Dubai Timetables](https://bham.targetconnect.net/student/home.html)
+* [Careers Connect](https://bham.targetconnect.net/student/home.html)
 * [IT Service Desk](https://universityofbirmingham.service-now.com/itportal/)
   * [Off-Site Working: Introduction To Our Services](https://universityofbirmingham.service-now.com/itportal/?id=uob_kb_article&sys_id=f6d495b61bf9c9107bc4a609b04bcbbb)
-  * [Careers Connect](https://remoteaccess.bham.ac.uk/)
+  * [Remote Access](https://remoteaccess.bham.ac.uk/)
 
 ## [UoB Intranet](https://intranet.birmingham.ac.uk/)
 
