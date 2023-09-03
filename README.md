@@ -24,6 +24,7 @@
 ## Accommodation
 
 * [The MyRiad Dubai - Linktree](https://linktr.ee/TMDResidents)
+* [The MyRiad Dubai - Cleaning Schedule](https://qrco.de/TMDWeeklyRoomCleaningSchedule)
 * [The MyRiad Dubai - Weekday Bus](https://qrco.de/TMDWeekdayBusSchedule)
 * [The MyRiad Dubai - Weekend Bus](https://qrco.de/TMDWeekendBusSchedule)
 * [The MyRiad Dubai - Bistro Menu](https://qrco.de/MyBistroMenu)
