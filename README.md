@@ -1,7 +1,3 @@
-# UoBD Important Websites
-
-> Please push your Ctrl/Command key if you want to open link in a new tab or window.
-
 ## Main Websites
 
 * [MyUoB](https://myuob.bham.ac.uk/)
