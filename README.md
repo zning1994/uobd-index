@@ -8,6 +8,9 @@
 * [IT Service Desk](https://universityofbirmingham.service-now.com/itportal/)
   * [Off-Site Working: Introduction To Our Services](https://universityofbirmingham.service-now.com/itportal/?id=uob_kb_article&sys_id=f6d495b61bf9c9107bc4a609b04bcbbb)
   * [Remote Access](https://remoteaccess.bham.ac.uk/)
+* [Verify Platform](https://verify.bham.ac.uk/)
+* [Student Gateway](https://student-gateway.bham.ac.uk/)
+
 
 ## [UoB Intranet](https://intranet.birmingham.ac.uk/)
 
