@@ -3,7 +3,7 @@
 ## Main Websites
 
 * [MyUoB](https://myuob.bham.ac.uk/)
-* [Canvas](https://canvas.bham.ac.uk/)
+* [Canvas](https://canvas.bham.ac.uk/) ([Tutorial](https://canvas.bham.ac.uk/courses/21228))
 * [LibGuides](https://libguides.bham.ac.uk/)
 * [Dubai Timetables](https://dubaitimetables.bham.ac.uk/)
 * [Careers Connect](https://bham.targetconnect.net/student/home.html)
