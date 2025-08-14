@@ -10,9 +10,11 @@ import {
   Heart,
   MapPin
 } from 'lucide-react';
+import { useI18n } from './i18n-provider';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useI18n();
 
   const quickLinks = [
     { name: 'MyUoB Portal', href: 'https://myuob.bham.ac.uk/', external: true },
@@ -40,16 +42,15 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="font-bold text-foreground">UoBD</h3>
-                <p className="text-xs text-muted-foreground">Important Websites</p>
+                <p className="text-xs text-muted-foreground">{t('footer.brandTagline')}</p>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Curated links and resources for University of Birmingham Dubai campus 
-              students and staff. Making academic life easier, one click at a time.
+              {t('footer.description')}
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
-              <span>Dubai, UAE</span>
+              <span>{t('footer.location')}</span>
             </div>
           </div>
 
@@ -94,14 +95,14 @@ export function Footer() {
 
           {/* Contact & Social */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Connect</h4>
+            <h4 className="font-semibold text-foreground">{t('footer.connect')}</h4>
             <div className="space-y-3">
               <a
                 href="mailto:i@zning.me"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-2"
               >
                 <Mail className="h-4 w-4" />
-                <span>Send Feedback</span>
+                <span>{t('footer.sendFeedback')}</span>
               </a>
               <a
                 href="https://github.com/zning1994/uobd-index"
@@ -110,7 +111,7 @@ export function Footer() {
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-2"
               >
                 <Github className="h-4 w-4" />
-                <span>View on GitHub</span>
+                <span>{t('footer.viewOnGitHub')}</span>
               </a>
             </div>
             
@@ -118,7 +119,7 @@ export function Footer() {
             <div className="pt-4">
               <div className="inline-flex items-center space-x-2 bg-background border border-border rounded-lg px-3 py-2 text-xs">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-muted-foreground">v2.0.0 • Online</span>
+                <span className="text-muted-foreground">v2.0.0 • {t('footer.online')}</span>
               </div>
             </div>
           </div>
@@ -132,14 +133,14 @@ export function Footer() {
             </div>
             
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <span>Made with</span>
+              <span>{t('footer.madeWith')}</span>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity, repeatDelay: 3 }}
               >
                 <Heart className="h-4 w-4 text-red-500 fill-current" />
               </motion.div>
-              <span>for UoB Dubai students</span>
+              <span>{t('footer.for')}</span>
             </div>
           </div>
         </div>

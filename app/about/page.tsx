@@ -105,9 +105,9 @@ export default function AboutPage() {
                 transition={{ delay: 0.1 }}
                 className="text-4xl sm:text-6xl font-bold text-foreground mb-6"
               >
-                UoBD Important{' '}
+                {t('hero.title').split(' ').slice(0, -1).join(' ')}{' '}
                 <span className="bg-gradient-to-r from-uob-primary to-uob-secondary bg-clip-text text-transparent">
-                  Websites
+                {t('hero.title').split(' ').slice(-1)}
                 </span>
               </motion.h1>
 

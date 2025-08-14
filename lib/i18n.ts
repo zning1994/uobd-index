@@ -72,6 +72,13 @@ export interface Translations {
   // Footer
   'footer.madeWith': string;
   'footer.for': string;
+  'footer.brandTagline': string;
+  'footer.description': string;
+  'footer.location': string;
+  'footer.connect': string;
+  'footer.sendFeedback': string;
+  'footer.viewOnGitHub': string;
+  'footer.online': string;
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -143,6 +150,13 @@ export const translations: Record<Locale, Translations> = {
     // Footer
     'footer.madeWith': 'Made with',
     'footer.for': 'for UoB Dubai students',
+    'footer.brandTagline': 'Important Websites',
+    'footer.description': 'Curated links and resources for University of Birmingham Dubai campus students and staff. Making academic life easier, one click at a time.',
+    'footer.location': 'Dubai, UAE',
+    'footer.connect': 'Connect',
+    'footer.sendFeedback': 'Send Feedback',
+    'footer.viewOnGitHub': 'View on GitHub',
+    'footer.online': 'Online',
   },
   zh: {
     // Header
@@ -212,6 +226,13 @@ export const translations: Record<Locale, Translations> = {
     // Footer
     'footer.madeWith': '用',
     'footer.for': '为 UoB 迪拜学生制作',
+    'footer.brandTagline': '重要网站',
+    'footer.description': '为伯明翰大学迪拜校区的师生整理的链接与资源，让学习生活更高效。',
+    'footer.location': '迪拜，阿联酋',
+    'footer.connect': '联系',
+    'footer.sendFeedback': '发送反馈',
+    'footer.viewOnGitHub': '在 GitHub 查看',
+    'footer.online': '在线',
   },
 };
 
