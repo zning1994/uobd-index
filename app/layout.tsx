@@ -83,8 +83,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Simple locale detection (client value will override after hydration)
+  const initialLang = 'en';
+  const initialDir = 'ltr';
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={initialLang} dir={initialDir} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

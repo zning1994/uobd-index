@@ -29,6 +29,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     return getTranslation(locale, key);
   };
 
+  // Apply lang & dir on html dynamically
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = locale;
+      document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
+    }
+  }, [locale]);
+
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
     return <div className="min-h-screen" />;

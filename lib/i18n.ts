@@ -1,6 +1,6 @@
-export type Locale = 'en' | 'zh';
+export type Locale = 'en' | 'zh' | 'ar';
 
-export const locales: Locale[] = ['en', 'zh'];
+export const locales: Locale[] = ['en', 'zh', 'ar'];
 
 export const defaultLocale: Locale = 'en';
 
@@ -234,6 +234,82 @@ export const translations: Record<Locale, Translations> = {
     'footer.viewOnGitHub': '在 GitHub 查看',
     'footer.online': '在线',
   },
+  ar: {
+    // Header
+    'header.home': 'الرئيسية',
+    'header.categories': 'التصنيفات',
+    'header.dubai': 'فرع دبي',
+    'header.about': 'حول',
+    'header.search': 'بحث',
+
+    // Hero Section
+    'hero.title': 'مواقع UoBD المهمة',
+    'hero.subtitle': 'خدمات وموارد أساسية لجامعة برمنغهام فرع دبي (الدراسة، الحرم الجامعي، السكن، المطاعم وغيرها)',
+    'hero.searchPlaceholder': 'ابحث عن الروابط أو الخدمات أو التصنيفات...',
+    'hero.allCategories': 'كل التصنيفات',
+    'hero.dubaiOnly': 'فرع دبي فقط',
+    'hero.clear': 'مسح',
+    'hero.showing': 'إظهار',
+    'hero.browseAll': 'استعراض كل',
+    'hero.of': 'من',
+    'hero.links': 'الروابط المهمة',
+
+    // Featured Links
+    'featured.badge': 'وصول سريع',
+    'featured.title': 'كل الروابط المهمة',
+    'featured.subtitle': 'مجموعة شاملة لخدمات UoB والموارد الأكاديمية ومعلومات فرع دبي.',
+
+    // About Page
+    'about.title': 'من نحن',
+    'about.subtitle': 'منصة روابط شاملة لطلاب وموظفي جامعة برمنغهام فرع دبي، لتبسيط الحياة الأكاديمية.',
+    'about.whyChoose': 'لماذا نحن؟',
+    'about.whyChooseSubtitle': 'منصة ذكية مصممة خصيصاً لطلاب فرع دبي',
+    'about.mission': 'مهمتنا',
+    'about.missionText1': 'يحتاج الطلاب في فرع دبي للوصول إلى العديد من الأنظمة والموارد المختلفة. من بوابات الدراسة إلى خدمات السكن، ومن موارد المكتبة إلى دعم تقنية المعلومات.',
+    'about.missionText2': 'تجمع مواقع UoBD المهمة كل الروابط الأساسية في مكان واحد ليوفر وقتك ويُسهِّل الوصول.',
+    'about.missionText3': 'كما نوفر موارد محلية خاصة بفرع دبي مثل الجداول الزمنية والمواصلات وخدمات السكن وقوائم المطاعم.',
+    'about.tech': 'التنفيذ التقني',
+    'about.techSubtitle': 'تقنيات حديثة لضمان أفضل تجربة استخدام',
+    'about.frontend': 'تقنيات الواجهة',
+    'about.deployment': 'النشر والتشغيل',
+    'about.seo': 'تحسين محركات البحث',
+    'about.ux': 'تجربة المستخدم',
+    'about.contact': 'تواصل معنا',
+    'about.contactSubtitle': 'لديك أسئلة أو اقتراحات أو تريد إضافة روابط جديدة؟ يسعدنا سماع رأيك.',
+    'about.sendEmail': 'إرسال بريد',
+    'about.github': 'المستودع على GitHub',
+
+    // Features
+    'feature.comprehensive.title': 'تغطية شاملة',
+    'feature.comprehensive.desc': 'روابط أساسية تشمل الدراسة والحياة الطلابية والخدمات الإدارية',
+    'feature.quick.title': 'وصول سريع',
+    'feature.quick.desc': 'وصول بنقرة واحدة دون تذكر عناوين معقدة',
+    'feature.dubai.title': 'تركيز فرع دبي',
+    'feature.dubai.desc': 'موارد محلية مصممة خصيصاً لطلاب فرع دبي',
+    'feature.secure.title': 'موثوق وآمن',
+    'feature.secure.desc': 'جميع الروابط موارد جامعية رسمية',
+    'feature.friendly.title': 'سهل الاستخدام',
+    'feature.friendly.desc': 'واجهة نظيفة مبنية على احتياجات الطلاب',
+    'feature.updated.title': 'تحديث مستمر',
+    'feature.updated.desc': 'صيانة وتحديثات دورية لضمان الدقة',
+
+    // Stats
+    'stats.links': 'روابط مهمة',
+    'stats.categories': 'التصنيفات الرئيسية',
+    'stats.dubai': 'خاص بدبي',
+    'stats.available': 'متاح دائماً',
+
+    // Footer
+    'footer.madeWith': 'صُنع بـ',
+    'footer.for': 'لطلبة فرع دبي بجامعة برمنغهام',
+    'footer.brandTagline': 'مواقع مهمة',
+    'footer.description': 'روابط وموارد مُنسّقة لطلاب وموظفي جامعة برمنغهام فرع دبي لتبسيط الحياة الأكاديمية.',
+    'footer.location': 'دبي، الإمارات',
+    'footer.connect': 'تواصل',
+    'footer.sendFeedback': 'أرسل ملاحظاتك',
+    'footer.viewOnGitHub': 'عرض على GitHub',
+    'footer.online': 'متصل',
+  },
 };
 
 export function getTranslation(locale: Locale, key: keyof Translations): string {
@@ -248,9 +324,8 @@ export function getCurrentLocale(): Locale {
     }
     // Auto-detect from browser
     const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('zh')) {
-      return 'zh';
-    }
+    if (browserLang.startsWith('zh')) return 'zh';
+    if (browserLang.startsWith('ar')) return 'ar';
   }
   return defaultLocale;
 }

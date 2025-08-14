@@ -11,6 +11,7 @@ export function LanguageSwitcher() {
   const localeNames: Record<Locale, string> = {
     en: 'English',
     zh: '中文',
+    ar: 'العربية',
   };
 
   return (
