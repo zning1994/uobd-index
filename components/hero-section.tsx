@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Search, Sparkles, MapPin, X, Filter } from 'lucide-react';
+import { useI18n } from './i18n-provider';
 
 interface HeroSectionProps {
   searchQuery: string;
@@ -26,6 +27,8 @@ export function HeroSection({
   resultCount,
   totalCount
 }: HeroSectionProps) {
+  const { t } = useI18n();
+  
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Search is handled by parent component through state
@@ -57,9 +60,9 @@ export function HeroSection({
             transition={{ duration: 0.6 }}
             className="text-2xl sm:text-3xl font-bold text-foreground mb-3"
           >
-            UoBD Important{' '}
+            {t('hero.title').split(' ').slice(0, -1).join(' ')}{' '}
             <span className="bg-gradient-to-r from-uob-primary to-uob-secondary bg-clip-text text-transparent">
-              Websites
+              {t('hero.title').split(' ').slice(-1)}
             </span>
           </motion.h1>
 
@@ -70,7 +73,7 @@ export function HeroSection({
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base text-muted-foreground mb-4 leading-relaxed"
           >
-            Essential University of Birmingham Dubai related services and resources (study, campus, accommodation, resturants, etc)
+            {t('hero.subtitle')}
             </motion.p>
 
           {/* Search Stats */}
@@ -81,9 +84,9 @@ export function HeroSection({
             className="text-sm text-muted-foreground mb-4"
           >
             {searchQuery || selectedCategory || showDubaiOnly ? (
-              <span>Showing {resultCount} of {totalCount} links</span>
+              <span>{t('hero.showing')} {resultCount} {t('hero.of')} {totalCount} {t('hero.links')}</span>
             ) : (
-              <span>Browse all {totalCount} important links</span>
+              <span>{t('hero.browseAll')} {totalCount} {t('hero.links')}</span>
             )}
           </motion.div>
 
@@ -103,7 +106,7 @@ export function HeroSection({
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search links, services, or categories..."
+                    placeholder={t('hero.searchPlaceholder')}
                     className="w-full pl-12 pr-12 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-uob-primary focus:border-transparent transition-all duration-200"
                   />
                   {searchQuery && (
@@ -126,7 +129,7 @@ export function HeroSection({
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-3 py-3 bg-background border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-uob-primary min-w-[140px]"
                 >
-                  <option value="">All Categories</option>
+                  <option value="">{t('hero.allCategories')}</option>
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -138,7 +141,7 @@ export function HeroSection({
                     onClick={clearFilters}
                     className="px-3 py-3 text-sm text-uob-primary hover:text-uob-primary/80 transition-colors border border-uob-primary/20 rounded-lg hover:bg-uob-primary/5"
                   >
-                    Clear
+                    {t('hero.clear')}
                   </button>
                 )}
               </div>

@@ -12,16 +12,19 @@ import {
   GraduationCap,
   Search
 } from 'lucide-react';
+import { LanguageSwitcher } from './language-switcher';
+import { useI18n } from './i18n-provider';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const { t } = useI18n();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    // { name: 'Categories', href: '/categories' },
-    // { name: 'Dubai Campus', href: '/dubai' },
-    { name: 'About', href: '/about' },
+    { name: t('header.home'), href: '/' },
+    // { name: t('header.categories'), href: '/categories' },
+    // { name: t('header.dubai'), href: '/dubai' },
+    { name: t('header.about'), href: '/about' },
   ];
 
   return (
@@ -40,7 +43,7 @@ export function Header() {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-lg font-bold text-foreground">UoBD</h1>
-                <p className="text-xs text-muted-foreground">Important Websites</p>
+                <p className="text-xs text-muted-foreground">{t('hero.title').split(' ').slice(-2).join(' ')}</p>
               </div>
             </motion.div>
           </Link>
@@ -60,7 +63,7 @@ export function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             {/* Search Button - Scroll to search */}
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -73,10 +76,13 @@ export function Header() {
                 }
               }}
               className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Search"
+              aria-label={t('header.search')}
             >
               <Search className="h-5 w-5" />
             </motion.button>
+
+            {/* Language Switcher */}
+            <LanguageSwitcher />
 
             {/* Theme Toggle */}
             <motion.button

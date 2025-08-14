@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ExternalLink, Star, MapPin } from 'lucide-react';
+import { useI18n } from './i18n-provider';
 
 interface FeaturedLink {
   id: string;
@@ -18,6 +19,8 @@ interface FeaturedLinksProps {
 }
 
 export function FeaturedLinks({ links }: FeaturedLinksProps) {
+  const { t } = useI18n();
+  
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -43,7 +46,7 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
             className="inline-flex items-center space-x-2 bg-uob-primary/10 text-uob-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
           >
             <Star className="h-4 w-4" />
-            <span>Quick Access</span>
+            <span>{t('featured.badge')}</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +54,7 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
             transition={{ delay: 0.1 }}
             className="text-3xl font-bold text-foreground mb-4"
           >
-            All Important Links
+            {t('featured.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +62,7 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Complete collection of UoB services, academic resources, and Dubai campus information.
+            {t('featured.subtitle')}
           </motion.p>
         </div>
 
