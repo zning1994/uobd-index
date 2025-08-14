@@ -40,14 +40,14 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
     <section className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 sm:mb-10">
-                    <motion.div
+                    {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center space-x-2 bg-uob-primary/10 text-uob-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
           >
             <Star className="h-4 w-4" />
             <span>{t('featured.badge')}</span>
-          </motion.div>
+          </motion.div> */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,14 +56,14 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
           >
             {t('featured.title')}
           </motion.h2>
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             {t('featured.subtitle')}
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <motion.div
