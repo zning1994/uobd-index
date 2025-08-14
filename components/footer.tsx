@@ -39,7 +39,7 @@ export function Footer() {
           <div className="flex items-center gap-4 bg-background border border-border rounded-lg p-4">
             <div className="w-20 h-20 flex-shrink-0 rounded-md overflow-hidden bg-muted">
               {/* 请将你的微信二维码图片放到 public/wechat-qr.png */}
-              <img src="/wechat-qr.png" alt="WeChat QR" className="w-full h-full object-cover" />
+              <img src="/wechat-qr.jpg" alt="WeChat QR" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-1">
               <div className="text-sm font-semibold text-foreground">{t('footer.wechat')}</div>
