@@ -159,7 +159,7 @@
         },
         {
           "id": "cleaning-schedule",
-          "title": "Cleaning Schedule",
+          "title": "MyRiad Cleaning Schedule",
           "url": "https://qrco.de/TMDWeeklyRoomCleaningSchedule",
           "description": "Weekly room cleaning schedule for MyRiad Dubai",
           "tags": ["cleaning", "schedule", "dubai"],
@@ -167,7 +167,7 @@
         },
         {
           "id": "weekday-bus",
-          "title": "Weekday Bus Schedule",
+          "title": "MyRiad Weekday Bus Schedule",
           "url": "https://qrco.de/TMDWeekdayBusSchedule",
           "description": "Bus schedule for weekdays",
           "tags": ["transport", "bus", "weekday", "dubai"],
@@ -175,7 +175,7 @@
         },
         {
           "id": "weekend-bus",
-          "title": "Weekend Bus Schedule",
+          "title": "MyRiad Weekend Bus Schedule",
           "url": "https://qrco.de/TMDWeekendBusSchedule",
           "description": "Bus schedule for weekends",
           "tags": ["transport", "bus", "weekend", "dubai"],
@@ -183,7 +183,7 @@
         },
         {
           "id": "bistro-menu",
-          "title": "Bistro Menu",
+          "title": "MyRiad Bistro Menu",
           "url": "https://qrco.de/MyBistroMenu",
           "description": "MyRiad Dubai bistro menu",
           "tags": ["food", "menu", "bistro", "dubai"],
