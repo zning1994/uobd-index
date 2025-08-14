@@ -41,14 +41,27 @@ export default function HomePage() {
     if (searchQuery.trim()) {
       const term = searchQuery.toLowerCase();
       filtered = filtered.filter(link => {
-        // 原文与本地化并存：在上面已合并为展示语言；这里额外对英文别名做兜底匹配
         const englishSource = linksData.categories
           .flatMap(c => c.links)
           .find(l => l.id === link.id);
-        const enTitle = englishSource?.title || '';
-        const enDesc = englishSource?.description || '';
-        const enTags = englishSource?.tags || [];
-        const fields = [link.title, link.description, link.category, enTitle, enDesc, ...link.tags, ...enTags];
+        const zhSource = (i18nMap as any).zh?.links?.[link.id] || null;
+        const arSource = (i18nMap as any).ar?.links?.[link.id] || null;
+
+        const fields = [
+          link.title,
+          link.description,
+          link.category,
+          englishSource?.title,
+          englishSource?.description,
+          ...(englishSource?.tags || []),
+          zhSource?.title,
+          zhSource?.description,
+          ...(zhSource?.tags || []),
+          arSource?.title,
+          arSource?.description,
+          ...(arSource?.tags || []),
+        ];
+
         return fields.some(f => (f || '').toString().toLowerCase().includes(term));
       });
     }

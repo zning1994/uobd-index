@@ -5,59 +5,12 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { I18nProvider } from '@/components/i18n-provider';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { MetaI18n } from '@/components/meta-i18n';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://uobd.inology.tech'),
-  title: {
-    default: 'UoBD Important Websites',
-    template: '%s | UoBD',
-  },
-  description: 'Curated links and resources for University of Birmingham Dubai campus students and staff.',
-  keywords: ['University of Birmingham', 'Dubai', 'UoB', 'UoBD', 'student portal', 'academic resources'],
-  authors: [{ name: 'ZNing' }],
-  creator: 'ZNing',
-  publisher: 'University of Birmingham Dubai',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://uobd.inology.tech',
-    siteName: 'UoBD Important Websites',
-    title: 'UoBD Important Websites',
-    description: 'Curated links and resources for University of Birmingham Dubai campus students and staff.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'UoBD Important Websites',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'UoBD Important Websites',
-    description: 'Curated links and resources for University of Birmingham Dubai campus students and staff.',
-    images: ['/og-image.png'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'G-MTYH758FNF',
-  },
-  alternates: {
-    canonical: '/',
-  },
 };
 
 const jsonLd = {
@@ -89,10 +42,6 @@ export default function RootLayout({
   return (
     <html lang={initialLang} dir={initialDir} suppressHydrationWarning>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -108,6 +57,7 @@ export default function RootLayout({
         >
           <I18nProvider>
             <div className="min-h-screen flex flex-col bg-background">
+              <MetaI18n />
               <Header />
               <main className="flex-1">
                 {children}

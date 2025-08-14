@@ -5,6 +5,9 @@ export const locales: Locale[] = ['en', 'zh', 'ar'];
 export const defaultLocale: Locale = 'en';
 
 export interface Translations {
+  // Meta
+  'meta.title': string;
+  'meta.description': string;
   // Header
   'header.home': string;
   'header.categories': string;
@@ -88,6 +91,9 @@ export interface Translations {
 
 export const translations: Record<Locale, Translations> = {
   en: {
+    // Meta
+    'meta.title': 'UoBD Important Websites',
+    'meta.description': 'Curated links and resources for University of Birmingham Dubai.',
     // Header
     'header.home': 'Home',
     'header.categories': 'Categories',
@@ -169,6 +175,9 @@ export const translations: Record<Locale, Translations> = {
     'footer.whatsappDesc': 'Tap to join the UoBD students WhatsApp group directly.',
   },
   zh: {
+    // Meta
+    'meta.title': 'UoBD 重要网站',
+    'meta.description': '伯明翰大学迪拜校区的重要链接与资源导航。',
     // Header
     'header.home': '首页',
     'header.categories': '分类',
@@ -250,6 +259,9 @@ export const translations: Record<Locale, Translations> = {
     'footer.whatsappDesc': '点击直接加入 UoBD 学生 WhatsApp 群。',
   },
   ar: {
+    // Meta
+    'meta.title': 'مواقع UoBD المهمة',
+    'meta.description': 'روابط وموارد مُنسّقة لجامعة برمنغهام فرع دبي.',
     // Header
     'header.home': 'الرئيسية',
     'header.categories': 'التصنيفات',
