@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* WhatsApp */}
           <a
-            href="https://chat.whatsapp.com/your-group-link"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 bg-background border border-border rounded-lg p-4 hover:bg-accent transition-colors"
