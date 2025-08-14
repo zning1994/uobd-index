@@ -7,6 +7,13 @@
       "icon": "globe",
       "links": [
         {
+          "id": "gradintelligence",
+          "title": "Gradintelligence",
+          "url": "https://gradintelligence.com/",
+          "description": "Gradintelligence allows you to track your academic documents (degree certificate, transcript, etc).",
+          "tags": ["portal", "academic", "essential", "gradintelligence", "graduation"]
+        },
+        {
           "id": "myuob",
           "title": "MyUoB",
           "url": "https://myuob.bham.ac.uk/",
@@ -50,7 +57,7 @@
         },
         {
           "id": "verify-platform",
-          "title": "Verify Platform",
+          "title": "Verify Platform (Out of date)",
           "url": "https://verify.bham.ac.uk/",
           "description": "Identity verification services",
           "tags": ["verification", "identity", "security"]
@@ -61,6 +68,13 @@
           "url": "https://student-gateway.bham.ac.uk/",
           "description": "Central hub for student services",
           "tags": ["portal", "services", "student"]
+        },
+        {
+          "id": "student-documents",
+          "title": "Student and Alumni Documents",
+          "url": "https://intranet.birmingham.ac.uk/student/academic-support/registry/ug-gt/student-documents.aspx",
+          "description": "Instruction for Student and Alumni Documents via Gradintelligence",
+          "tags": ["portal", "academic", "essential", "student", "alumni", "documents"]
         }
       ]
     },
