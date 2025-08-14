@@ -32,7 +32,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link href="/" className="flex items-center space-x-2 space-x-reverse group">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -49,7 +49,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 space-x-reverse">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -63,7 +63,7 @@ export function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 space-x-reverse">
             {/* Search Button - Scroll to search */}
             <motion.button
               whileHover={{ scale: 1.05 }}
