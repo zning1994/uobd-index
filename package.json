@@ -10,15 +10,16 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "next": "14.2.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "framer-motion": "^11.3.30",
     "lucide-react": "^0.441.0",
+    "next": "14.2.7",
     "next-sitemap": "^4.2.3",
-    "next-themes": "^0.3.0"
+    "next-themes": "^0.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "^20.14.15",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",

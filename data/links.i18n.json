@@ -1,0 +1,119 @@
+{
+  "zh": {
+    "categories": {
+      "main-websites": { "title": "主站与门户", "description": "UoB 必备门户与服务" },
+      "it-services": { "title": "IT 服务", "description": "技术支持与 IT 资源" },
+      "intranet": { "title": "内联网", "description": "校内资源与服务" },
+      "accommodation": { "title": "住宿", "description": "住宿与生活服务" }
+    },
+    "links": {
+      "gradintelligence": {
+        "title": "Gradintelligence",
+        "description": "Gradintelligence 可用于查看与跟踪你的学术文档（学位证书、成绩单等）",
+        "tags": ["门户", "学术", "必备", "毕业", "文档"]
+      },
+      "myuob": {
+        "title": "MyUoB",
+        "description": "学术信息与服务的学生门户",
+        "tags": ["门户", "学术", "必备"]
+      },
+      "canvas": {
+        "title": "Canvas 学习平台",
+        "description": "学习管理系统",
+        "tags": ["学习", "课程", "必备"]
+      },
+      "libguides": {
+        "title": "图书馆指南",
+        "description": "图书馆研究向导与资源",
+        "tags": ["图书馆", "研究", "学术"]
+      },
+      "dubai-timetables": {
+        "title": "迪拜课表",
+        "description": "迪拜校区课程时间表",
+        "tags": ["课表", "迪拜", "时间表"]
+      },
+      "careers-connect": {
+        "title": "职业发展",
+        "description": "职业服务与就业机会",
+        "tags": ["职业", "就业", "发展"]
+      },
+      "verify-platform": {
+        "title": "核验平台（已过期）",
+        "description": "身份核验服务",
+        "tags": ["核验", "身份", "安全"]
+      },
+      "student-gateway": {
+        "title": "学生服务门户",
+        "description": "学生服务中央入口",
+        "tags": ["门户", "服务", "学生"]
+      },
+      "student-documents": {
+        "title": "学生与校友文档",
+        "description": "通过 Gradintelligence 获取学生与校友文档的指引",
+        "tags": ["门户", "学术", "学生", "校友", "文档"]
+      },
+      "it-service-desk": {
+        "title": "IT 服务台",
+        "description": "技术支持与 IT 帮助",
+        "tags": ["支持", "IT", "帮助"]
+      },
+      "off-site-working": {
+        "title": "远程办公指南",
+        "description": "远程办公相关服务指引",
+        "tags": ["远程", "指南", "IT"]
+      },
+      "remote-access": {
+        "title": "远程访问",
+        "description": "远程访问学校系统",
+        "tags": ["远程", "VPN", "访问"]
+      },
+      "main-intranet": {
+        "title": "UoB 内联网",
+        "description": "大学内联网主入口",
+        "tags": ["内联网", "内部", "门户"]
+      },
+      "library-services": {
+        "title": "图书馆服务",
+        "description": "图书馆服务与资源",
+        "tags": ["图书馆", "服务", "学术"]
+      },
+      "digital-services": {
+        "title": "学生数字服务",
+        "description": "面向学生的数字工具与服务",
+        "tags": ["数字", "服务", "学生"]
+      },
+      "course-administration": {
+        "title": "课程与模块管理",
+        "description": "课程与模块相关管理工具",
+        "tags": ["管理", "课程", "模块"]
+      },
+      "myriad-linktree": {
+        "title": "MyRiad 住户入口",
+        "description": "MyRiad Dubai 住户信息中心",
+        "tags": ["住宿", "迪拜", "Linktree"]
+      },
+      "cleaning-schedule": {
+        "title": "MyRiad 清洁安排",
+        "description": "MyRiad Dubai 每周房间清洁安排",
+        "tags": ["清洁", "安排", "迪拜"]
+      },
+      "weekday-bus": {
+        "title": "MyRiad 工作日班车",
+        "description": "工作日班车时间表",
+        "tags": ["交通", "班车", "工作日", "迪拜"]
+      },
+      "weekend-bus": {
+        "title": "MyRiad 周末班车",
+        "description": "周末班车时间表",
+        "tags": ["交通", "班车", "周末", "迪拜"]
+      },
+      "bistro-menu": {
+        "title": "MyRiad 餐厅菜单",
+        "description": "MyRiad Dubai 餐厅菜单",
+        "tags": ["餐饮", "菜单", "餐厅", "迪拜"]
+      }
+    }
+  }
+}
+
+

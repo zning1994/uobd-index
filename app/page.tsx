@@ -6,17 +6,34 @@ import { CategoryGrid } from '@/components/category-grid';
 import { QuickStats } from '@/components/quick-stats';
 import { FeaturedLinks } from '@/components/featured-links';
 import linksData from '@/data/links.json';
+import zhData from '@/data/links.i18n.json';
+import { getCurrentLocale } from '@/lib/i18n';
 
 export default function HomePage() {
   const { categories } = linksData;
+  const i18n = zhData.zh;
+  const locale = getCurrentLocale();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [showDubaiOnly, setShowDubaiOnly] = useState(false);
 
   // Get all links for Quick Access
-  const allLinks = categories.flatMap(category => 
-    category.links.map(link => ({ ...link, category: category.title }))
-  );
+  const allLinks = categories.flatMap(category => {
+    const categoryTitle = category.title;
+    const localizedCategoryTitle = locale === 'zh' && i18n.categories[category.id]?.title
+      ? i18n.categories[category.id].title
+      : categoryTitle;
+    return category.links.map(link => {
+      const localized = locale === 'zh' && i18n.links[link.id] ? i18n.links[link.id] : null;
+      return {
+        ...link,
+        title: localized?.title || link.title,
+        description: localized?.description || link.description,
+        tags: localized?.tags || link.tags,
+        category: localizedCategoryTitle
+      };
+    });
+  });
 
   // Filter links based on search criteria
   const filteredLinks = useMemo(() => {
@@ -24,13 +41,18 @@ export default function HomePage() {
 
     // Text search
     if (searchQuery.trim()) {
-      const searchTerm = searchQuery.toLowerCase();
-      filtered = filtered.filter(link => 
-        link.title.toLowerCase().includes(searchTerm) ||
-        link.description.toLowerCase().includes(searchTerm) ||
-        link.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
-        link.category.toLowerCase().includes(searchTerm)
-      );
+      const term = searchQuery.toLowerCase();
+      filtered = filtered.filter(link => {
+        // 原文与本地化并存：在上面已合并为展示语言；这里额外对英文别名做兜底匹配
+        const englishSource = linksData.categories
+          .flatMap(c => c.links)
+          .find(l => l.id === link.id);
+        const enTitle = englishSource?.title || '';
+        const enDesc = englishSource?.description || '';
+        const enTags = englishSource?.tags || [];
+        const fields = [link.title, link.description, link.category, enTitle, enDesc, ...link.tags, ...enTags];
+        return fields.some(f => (f || '').toString().toLowerCase().includes(term));
+      });
     }
 
     // Category filter

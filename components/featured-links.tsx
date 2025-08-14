@@ -96,7 +96,7 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
                       </div>
                     )}
                   </div>
-                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-3 sm:line-clamp-4 lg:line-clamp-5">
                     {link.description}
                   </p>
                   <div className="text-xs text-uob-primary/70 font-medium">
