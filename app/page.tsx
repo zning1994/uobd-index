@@ -6,31 +6,29 @@ import { CategoryGrid } from '@/components/category-grid';
 import { QuickStats } from '@/components/quick-stats';
 import { FeaturedLinks } from '@/components/featured-links';
 import linksData from '@/data/links.json';
-import zhData from '@/data/links.i18n.json';
-import { getCurrentLocale } from '@/lib/i18n';
+import i18nMap from '@/data/links.i18n.json';
+import { useI18n } from '@/components/i18n-provider';
 
 export default function HomePage() {
   const { categories } = linksData;
-  const i18n = zhData.zh;
-  const locale = getCurrentLocale();
+  const { locale } = useI18n();
+  const i18n: any = (i18nMap as any)[locale] || {};
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [showDubaiOnly, setShowDubaiOnly] = useState(false);
 
   // Get all links for Quick Access
   const allLinks = categories.flatMap(category => {
-    const categoryTitle = category.title;
-    const localizedCategoryTitle = locale === 'zh' && i18n.categories[category.id]?.title
-      ? i18n.categories[category.id].title
-      : categoryTitle;
+    const categoryTitle = category.title as string;
+    const localizedCategoryTitle = i18n.categories?.[category.id]?.title || categoryTitle;
     return category.links.map(link => {
-      const localized = locale === 'zh' && i18n.links[link.id] ? i18n.links[link.id] : null;
+      const localized = i18n.links?.[link.id] || null;
       return {
         ...link,
         title: localized?.title || link.title,
         description: localized?.description || link.description,
         tags: localized?.tags || link.tags,
-        category: localizedCategoryTitle
+        category: localizedCategoryTitle,
       };
     });
   });
