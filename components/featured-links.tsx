@@ -37,21 +37,21 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          {/* <motion.div
+                    <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 px-4 py-2 rounded-full text-sm font-medium mb-6"
+            className="inline-flex items-center space-x-2 bg-uob-primary/10 text-uob-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
           >
             <Star className="h-4 w-4" />
-            <span>Featured Links</span>
-          </motion.div> */}
+            <span>Quick Access</span>
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-3xl font-bold text-foreground mb-4"
           >
-            Quick Access
+            All Important Links
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Essential links and Dubai-specific resources for immediate access.
+            Complete collection of UoB services, academic resources, and Dubai campus information.
           </motion.p>
         </div>
 
@@ -67,7 +67,7 @@ export function FeaturedLinks({ links }: FeaturedLinksProps) {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {links.map((link) => (
             <motion.a

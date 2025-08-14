@@ -7,12 +7,10 @@ import linksData from '@/data/links.json';
 export default function HomePage() {
   const { categories } = linksData;
 
-  // Get featured links (Dubai-specific and essential links)
-  const featuredLinks = categories.flatMap(category => 
-    category.links.filter(link => 
-      link.isDubaiSpecific || link.tags.includes('essential')
-    ).map(link => ({ ...link, category: category.title }))
-  ).slice(0, 6);
+  // Get all links for Quick Access
+  const allLinks = categories.flatMap(category => 
+    category.links.map(link => ({ ...link, category: category.title }))
+  );
 
   return (
     <div className="min-h-screen">
@@ -23,7 +21,7 @@ export default function HomePage() {
       {/* <QuickStats data={linksData.metadata} /> */}
       
       {/* Featured Links */}
-      <FeaturedLinks links={featuredLinks} />
+      <FeaturedLinks links={allLinks} />
       
       {/* Category Grid */}
       {/* <section className="py-16 px-4 sm:px-6 lg:px-8">

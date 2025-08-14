@@ -99,7 +99,7 @@ export function HeroSection() {
           </motion.p>
 
           {/* Search Box */}
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -125,7 +125,7 @@ export function HeroSection() {
                 Search
               </motion.button>
             </form>
-          </motion.div> */}
+          </motion.div>
 
           {/* Quick Access Pills */}
           {/* <motion.div
