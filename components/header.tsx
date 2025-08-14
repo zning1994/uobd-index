@@ -19,8 +19,8 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Categories', href: '/categories' },
-    { name: 'Dubai Campus', href: '/dubai' },
+    // { name: 'Categories', href: '/categories' },
+    // { name: 'Dubai Campus', href: '/dubai' },
     { name: 'About', href: '/about' },
   ];
 
@@ -61,10 +61,17 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            {/* Search Button */}
+            {/* Search Button - Scroll to search */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const searchInput = document.querySelector('input[placeholder*="Search"]') as HTMLInputElement;
+                if (searchInput) {
+                  searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  searchInput.focus();
+                }
+              }}
               className="p-2 text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Search"
             >

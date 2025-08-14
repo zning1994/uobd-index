@@ -1,16 +1,40 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Sparkles, MapPin } from 'lucide-react';
+import { Search, Sparkles, MapPin, X, Filter } from 'lucide-react';
 
-export function HeroSection() {
-  const [searchQuery, setSearchQuery] = useState('');
+interface HeroSectionProps {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
+  showDubaiOnly: boolean;
+  setShowDubaiOnly: (show: boolean) => void;
+  categories: string[];
+  resultCount: number;
+  totalCount: number;
+}
 
+export function HeroSection({
+  searchQuery,
+  setSearchQuery,
+  selectedCategory,
+  setSelectedCategory,
+  showDubaiOnly,
+  setShowDubaiOnly,
+  categories,
+  resultCount,
+  totalCount
+}: HeroSectionProps) {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement search functionality
-    console.log('Search query:', searchQuery);
+    // Search is handled by parent component through state
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCategory('');
+    setShowDubaiOnly(false);
   };
 
   return (
@@ -92,11 +116,25 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
             Your curated gateway to essential UoB services, academic resources, 
             and Dubai campus-specific information. Everything you need, organized and accessible.
           </motion.p>
+
+          {/* Search Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-sm text-muted-foreground mb-8"
+          >
+            {searchQuery || selectedCategory || showDubaiOnly ? (
+              <span>Showing {resultCount} of {totalCount} links</span>
+            ) : (
+              <span>Browse all {totalCount} important links</span>
+            )}
+          </motion.div>
 
           {/* Search Box */}
           <motion.div
@@ -113,38 +151,66 @@ export function HeroSection() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search for links, services, or categories..."
-                  className="w-full pl-12 pr-4 py-4 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-uob-primary focus:border-transparent transition-all duration-200 shadow-lg"
+                  className="w-full pl-12 pr-12 py-4 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-uob-primary focus:border-transparent transition-all duration-200 shadow-lg"
                 />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                )}
               </div>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="submit"
-                className="absolute right-2 top-2 bottom-2 px-6 bg-uob-primary text-white rounded-lg hover:bg-uob-primary/90 transition-colors font-medium"
-              >
-                Search
-              </motion.button>
             </form>
           </motion.div>
 
-          {/* Quick Access Pills */}
-          {/* <motion.div
+          {/* Filters */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-wrap justify-center gap-3 mt-8"
+            className="flex flex-wrap justify-center gap-4 items-center mt-8"
           >
-            {['MyUoB', 'Canvas', 'Dubai Timetables', 'IT Support'].map((item) => (
-              <motion.button
-                key={item}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+            <div className="flex items-center space-x-2">
+              <Filter className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm font-medium text-muted-foreground">Filter:</span>
+            </div>
+
+            {/* Category Filter */}
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-3 py-2 bg-background border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-uob-primary"
+            >
+              <option value="">All Categories</option>
+              {categories.map(category => (
+                <option key={category} value={category}>{category}</option>
+              ))}
+            </select>
+
+            {/* Dubai Filter */}
+            <label className="flex items-center space-x-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={showDubaiOnly}
+                onChange={(e) => setShowDubaiOnly(e.target.checked)}
+                className="rounded border-border text-uob-primary focus:ring-uob-primary"
+              />
+              <span className="text-sm text-muted-foreground">Dubai Only</span>
+            </label>
+
+            {/* Clear Filters */}
+            {(searchQuery || selectedCategory || showDubaiOnly) && (
+              <button
+                onClick={clearFilters}
+                className="text-sm text-uob-primary hover:text-uob-primary/80 transition-colors"
               >
-                {item}
-              </motion.button>
-            ))}
-          </motion.div> */}
+                Clear All
+              </button>
+            )}
+          </motion.div>
         </div>
       </div>
     </section>
