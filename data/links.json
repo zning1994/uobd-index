@@ -1,0 +1,187 @@
+{
+  "categories": [
+    {
+      "id": "main-websites",
+      "title": "Main Websites",
+      "description": "Essential UoB portals and services",
+      "icon": "globe",
+      "links": [
+        {
+          "id": "myuob",
+          "title": "MyUoB",
+          "url": "https://myuob.bham.ac.uk/",
+          "description": "Student portal for academic information and services",
+          "tags": ["portal", "academic", "essential"]
+        },
+        {
+          "id": "canvas",
+          "title": "Canvas",
+          "url": "https://canvas.bham.ac.uk/",
+          "description": "Learning management system",
+          "tags": ["learning", "courses", "essential"],
+          "relatedLinks": [
+            {
+              "title": "Canvas Tutorial",
+              "url": "https://canvas.bham.ac.uk/courses/21228"
+            }
+          ]
+        },
+        {
+          "id": "libguides",
+          "title": "LibGuides",
+          "url": "https://libguides.bham.ac.uk/",
+          "description": "Library research guides and resources",
+          "tags": ["library", "research", "academic"]
+        },
+        {
+          "id": "dubai-timetables",
+          "title": "Dubai Timetables",
+          "url": "https://dubaitimetables.bham.ac.uk/",
+          "description": "Class schedules for Dubai campus",
+          "tags": ["timetable", "dubai", "schedule"],
+          "isDubaiSpecific": true
+        },
+        {
+          "id": "careers-connect",
+          "title": "Careers Connect",
+          "url": "https://bham.targetconnect.net/student/home.html",
+          "description": "Career services and job opportunities",
+          "tags": ["careers", "jobs", "professional"]
+        },
+        {
+          "id": "verify-platform",
+          "title": "Verify Platform",
+          "url": "https://verify.bham.ac.uk/",
+          "description": "Identity verification services",
+          "tags": ["verification", "identity", "security"]
+        },
+        {
+          "id": "student-gateway",
+          "title": "Student Gateway",
+          "url": "https://student-gateway.bham.ac.uk/",
+          "description": "Central hub for student services",
+          "tags": ["portal", "services", "student"]
+        }
+      ]
+    },
+    {
+      "id": "it-services",
+      "title": "IT Services",
+      "description": "Technical support and IT resources",
+      "icon": "monitor",
+      "links": [
+        {
+          "id": "it-service-desk",
+          "title": "IT Service Desk",
+          "url": "https://universityofbirmingham.service-now.com/itportal/",
+          "description": "Technical support and IT help",
+          "tags": ["support", "it", "help"]
+        },
+        {
+          "id": "off-site-working",
+          "title": "Off-Site Working Guide",
+          "url": "https://universityofbirmingham.service-now.com/itportal/?id=uob_kb_article&sys_id=f6d495b61bf9c9107bc4a609b04bcbbb",
+          "description": "Introduction to remote working services",
+          "tags": ["remote", "guide", "it"]
+        },
+        {
+          "id": "remote-access",
+          "title": "Remote Access",
+          "url": "https://remoteaccess.bham.ac.uk/",
+          "description": "Access university systems remotely",
+          "tags": ["remote", "vpn", "access"]
+        }
+      ]
+    },
+    {
+      "id": "intranet",
+      "title": "UoB Intranet",
+      "description": "Internal university resources and services",
+      "icon": "building",
+      "links": [
+        {
+          "id": "main-intranet",
+          "title": "UoB Intranet",
+          "url": "https://intranet.birmingham.ac.uk/",
+          "description": "Main university intranet portal",
+          "tags": ["intranet", "internal", "portal"]
+        },
+        {
+          "id": "library-services",
+          "title": "Library Services",
+          "url": "https://intranet.birmingham.ac.uk/as/libraryservices/library/index.aspx",
+          "description": "Library services and resources",
+          "tags": ["library", "services", "academic"]
+        },
+        {
+          "id": "digital-services",
+          "title": "Digital Services for Students",
+          "url": "https://intranet.birmingham.ac.uk/student/digital-services/index.aspx",
+          "description": "Digital tools and services for students",
+          "tags": ["digital", "services", "student"]
+        },
+        {
+          "id": "course-administration",
+          "title": "Course and Module Administration",
+          "url": "https://intranet.birmingham.ac.uk/student/digital-services/administration.aspx",
+          "description": "Course and module administrative tools",
+          "tags": ["administration", "course", "module"]
+        }
+      ]
+    },
+    {
+      "id": "accommodation",
+      "title": "Accommodation",
+      "description": "Housing and accommodation services",
+      "icon": "home",
+      "links": [
+        {
+          "id": "myriad-linktree",
+          "title": "The MyRiad Dubai - Linktree",
+          "url": "https://linktr.ee/TMDResidents",
+          "description": "Central hub for MyRiad Dubai residents",
+          "tags": ["accommodation", "dubai", "linktree"],
+          "isDubaiSpecific": true
+        },
+        {
+          "id": "cleaning-schedule",
+          "title": "Cleaning Schedule",
+          "url": "https://qrco.de/TMDWeeklyRoomCleaningSchedule",
+          "description": "Weekly room cleaning schedule for MyRiad Dubai",
+          "tags": ["cleaning", "schedule", "dubai"],
+          "isDubaiSpecific": true
+        },
+        {
+          "id": "weekday-bus",
+          "title": "Weekday Bus Schedule",
+          "url": "https://qrco.de/TMDWeekdayBusSchedule",
+          "description": "Bus schedule for weekdays",
+          "tags": ["transport", "bus", "weekday", "dubai"],
+          "isDubaiSpecific": true
+        },
+        {
+          "id": "weekend-bus",
+          "title": "Weekend Bus Schedule",
+          "url": "https://qrco.de/TMDWeekendBusSchedule",
+          "description": "Bus schedule for weekends",
+          "tags": ["transport", "bus", "weekend", "dubai"],
+          "isDubaiSpecific": true
+        },
+        {
+          "id": "bistro-menu",
+          "title": "Bistro Menu",
+          "url": "https://qrco.de/MyBistroMenu",
+          "description": "MyRiad Dubai bistro menu",
+          "tags": ["food", "menu", "bistro", "dubai"],
+          "isDubaiSpecific": true
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-01-15",
+    "version": "2.0.0",
+    "totalLinks": 20,
+    "dubaiSpecificLinks": 5
+  }
+}
