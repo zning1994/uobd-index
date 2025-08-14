@@ -298,13 +298,13 @@ export default function AboutPage() {
                 </a>
               </div>
 
-              <div className="mt-12 pt-8 border-t border-border">
+              {/* <div className="mt-12 pt-8 border-t border-border">
                 <div className="flex items-center justify-center space-x-2 text-muted-foreground">
                   <span>Made with</span>
                   <Heart className="h-4 w-4 text-red-500 fill-current" />
                   <span>by ZNing for UoB Dubai students</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
