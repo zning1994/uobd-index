@@ -42,6 +42,22 @@ export default function RootLayout({
   return (
     <html lang={initialLang} dir={initialDir} suppressHydrationWarning>
       <head>
+        {/* Early locale bootstrap to set lang/dir before hydration to avoid Chrome translate prompt */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                try{
+                  var s = localStorage.getItem('locale') || '';
+                  var n = (navigator.language||'').toLowerCase();
+                  var l = s || (n.indexOf('zh')===0?'zh':(n.indexOf('ar')===0?'ar':'en'));
+                  document.documentElement.lang = l;
+                  document.documentElement.dir = (l==='ar')?'rtl':'ltr';
+                }catch(e){}
+              })();
+            `,
+          }}
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
