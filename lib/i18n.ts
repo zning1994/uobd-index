@@ -79,6 +79,11 @@ export interface Translations {
   'footer.sendFeedback': string;
   'footer.viewOnGitHub': string;
   'footer.online': string;
+  'footer.joinCommunity': string;
+  'footer.wechat': string;
+  'footer.wechatDesc': string;
+  'footer.whatsapp': string;
+  'footer.whatsappDesc': string;
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -157,6 +162,11 @@ export const translations: Record<Locale, Translations> = {
     'footer.sendFeedback': 'Send Feedback',
     'footer.viewOnGitHub': 'View on GitHub',
     'footer.online': 'Online',
+    'footer.joinCommunity': 'Join Community',
+    'footer.wechat': 'WeChat Contact',
+    'footer.wechatDesc': 'Scan the QR code to add on WeChat. After verification you will be invited to the UoBD students group.',
+    'footer.whatsapp': 'WhatsApp Group',
+    'footer.whatsappDesc': 'Tap to join the UoBD students WhatsApp group directly.',
   },
   zh: {
     // Header
@@ -233,6 +243,11 @@ export const translations: Record<Locale, Translations> = {
     'footer.sendFeedback': '发送反馈',
     'footer.viewOnGitHub': '在 GitHub 查看',
     'footer.online': '在线',
+    'footer.joinCommunity': '加入社区',
+    'footer.wechat': '微信联系',
+    'footer.wechatDesc': '扫码添加微信，验证后邀请加入 UoBD 留学生群。',
+    'footer.whatsapp': 'WhatsApp 群组',
+    'footer.whatsappDesc': '点击直接加入 UoBD 学生 WhatsApp 群。',
   },
   ar: {
     // Header
@@ -309,6 +324,11 @@ export const translations: Record<Locale, Translations> = {
     'footer.sendFeedback': 'أرسل ملاحظاتك',
     'footer.viewOnGitHub': 'عرض على GitHub',
     'footer.online': 'متصل',
+    'footer.joinCommunity': 'انضم إلى المجتمع',
+    'footer.wechat': 'التواصل عبر WeChat',
+    'footer.wechatDesc': 'امسح رمز QR لإضافتي على WeChat. بعد التحقق سيتم دعوتك إلى مجموعة طلاب UoBD.',
+    'footer.whatsapp': 'مجموعة WhatsApp',
+    'footer.whatsappDesc': 'اضغط للانضمام مباشرة إلى مجموعة طلاب UoBD على WhatsApp.',
   },
 };
 
