@@ -190,7 +190,7 @@ export const translations: Record<Locale, Translations> = {
     'about.whyChooseSubtitle': '专为 UoB 迪拜学生设计的智能导航平台',
     'about.mission': '我们的使命',
     'about.missionText1': '在伯明翰大学迪拜校区，学生需要访问众多不同的系统和资源。从学术门户到住宿服务，从图书馆资源到 IT 支持，重要的链接分散在各个地方。',
-    'about.missionText2': 'UoBD Important Websites 的诞生就是为了解决这个问题。我们将所有重要的链接整理在一个地方，让学生能够快速找到所需的资源，专注于学习而不是浪费时间寻找正确的网址。',
+    'about.missionText2': 'UoBD 重要网站的诞生就是为了解决这个问题。我们将所有重要的链接整理在一个地方，让学生能够快速找到所需的资源，专注于学习而不是浪费时间寻找正确的网址。',
     'about.missionText3': '特别是对于迪拜校区的学生，我们还提供了本地化的资源，包括交通时刻表、住宿服务、餐厅菜单等实用信息。',
     'about.tech': '技术实现',
     'about.techSubtitle': '现代化的技术栈，确保最佳的用户体验',
