@@ -21,12 +21,12 @@ import { useI18n } from '@/components/i18n-provider';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About UoBD Important Websites',
-  description: 'Learn about UoBD Important Websites - your gateway to University of Birmingham Dubai resources.',
+  name: 'About University of Birmingham Dubai Important Websites',
+  description: 'Learn about University of Birmingham Dubai Important Websites - your gateway to University of Birmingham Dubai resources.',
   url: 'https://uobd.inology.tech/about',
   mainEntity: {
     '@type': 'WebSite',
-    name: 'UoBD Important Websites',
+    name: 'University of Birmingham Dubai Important Websites',
     url: 'https://uobd.inology.tech',
     publisher: {
       '@type': 'Organization',

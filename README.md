@@ -1,6 +1,6 @@
-# UoBD Important Websites - Next.js Version
+# University of Birmingham Dubai Important Websites - Next.js Version
 
-> 🎉 **全新设计** - 使用 Next.js 14 重构，炫酷的 UI 设计，完美的 SEO 优化，专为 University of Birmingham Dubai 校区定制。
+> 🎉 **全新设计** - 使用 Next.js 14 重构，炫酷的 UI 设计，完美的 SEO 优化，专为伯明翰大学迪拜校区定制。
 
 ## ✨ 特性
 
@@ -10,7 +10,7 @@
 - 📱 **响应式**: 完美适配桌面、平板、手机
 - 🔍 **SEO 友好**: 静态生成 + 结构化数据 + 元信息优化
 - ⚡ **性能优化**: 图片优化 + 代码分割 + 预加载
-- 🏫 **UoB 品牌**: 符合 University of Birmingham 官方色调
+- 🏫 **UoB 品牌**: 符合伯明翰大学官方色调
 - 🇦🇪 **Dubai 专区**: 专门的迪拜校区资源区域
 
 ## 🏗️ 技术栈
@@ -168,4 +168,4 @@ MIT License - 详见 [LICENSE](LICENSE) 文件。
 
 ---
 
-**由 ZNing 用 ❤️ 为 UoB Dubai 学生制作**
+**由 ZNing 用 ❤️ 为伯明翰大学迪拜校区学生制作**

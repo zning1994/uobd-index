@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'UoBD Important Websites',
+  name: 'University of Birmingham Dubai Important Websites',
   description: 'Curated links and resources for University of Birmingham Dubai campus students and staff.',
   url: 'https://uobd.inology.tech',
   potentialAction: {

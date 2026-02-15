@@ -2,36 +2,50 @@
 
 import { useState, useMemo } from 'react';
 import { HeroSection } from '@/components/hero-section';
-import { CategoryGrid } from '@/components/category-grid';
-import { QuickStats } from '@/components/quick-stats';
 import { FeaturedLinks } from '@/components/featured-links';
+import { CategorizedLinks } from '@/components/categorized-links';
 import linksData from '@/data/links.json';
 import i18nMap from '@/data/links.i18n.json';
 import { useI18n } from '@/components/i18n-provider';
 
 export default function HomePage() {
-  const { categories } = linksData;
+  const { categories: rawCategories } = linksData;
   const { locale } = useI18n();
   const i18n: any = (i18nMap as any)[locale] || {};
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [showDubaiOnly, setShowDubaiOnly] = useState(false);
 
-  // Get all links for Quick Access
-  const allLinks = categories.flatMap(category => {
-    const categoryTitle = category.title as string;
-    const localizedCategoryTitle = i18n.categories?.[category.id]?.title || categoryTitle;
-    return category.links.map(link => {
-      const localized = i18n.links?.[link.id] || null;
+  // Prepare categories with localized content
+  const categories = useMemo(() => {
+    return rawCategories.map(cat => {
+      const localizedCat = i18n.categories?.[cat.id] || {};
       return {
-        ...link,
-        title: localized?.title || link.title,
-        description: localized?.description || link.description,
-        tags: localized?.tags || link.tags,
-        category: localizedCategoryTitle,
+        ...cat,
+        title: localizedCat.title || cat.title,
+        description: localizedCat.description || cat.description,
+        links: cat.links.map(link => {
+          const localizedLink = i18n.links?.[link.id] || {};
+          return {
+            ...link,
+            title: localizedLink.title || link.title,
+            description: localizedLink.description || link.description,
+            tags: localizedLink.tags || link.tags,
+          };
+        }),
       };
     });
-  });
+  }, [rawCategories, i18n]);
+
+  // Get all links for search/filter (flat list)
+  const allLinks = useMemo(() => {
+    return categories.flatMap(category => 
+      category.links.map(link => ({
+        ...link,
+        category: category.title,
+      }))
+    );
+  }, [categories]);
 
   // Filter links based on search criteria
   const filteredLinks = useMemo(() => {
@@ -79,6 +93,27 @@ export default function HomePage() {
     return filtered;
   }, [allLinks, searchQuery, selectedCategory, showDubaiOnly]);
 
+  // Check if search is active (text search always shows flat list)
+  const isSearching = searchQuery.trim() !== '';
+
+  // Filter categories for display (when using category filter or dubai filter)
+  const displayCategories = useMemo(() => {
+    if (!selectedCategory && !showDubaiOnly) return categories;
+    
+    return categories.filter(cat => {
+      if (selectedCategory && cat.title !== selectedCategory) return false;
+      if (showDubaiOnly) {
+        return cat.links.some(link => link.isDubaiSpecific);
+      }
+      return true;
+    }).map(cat => ({
+      ...cat,
+      links: showDubaiOnly 
+        ? cat.links.filter(link => link.isDubaiSpecific)
+        : cat.links,
+    }));
+  }, [categories, selectedCategory, showDubaiOnly]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Search */}
@@ -90,30 +125,18 @@ export default function HomePage() {
         showDubaiOnly={showDubaiOnly}
         setShowDubaiOnly={setShowDubaiOnly}
         categories={categories.map(cat => cat.title)}
-        resultCount={filteredLinks.length}
+        resultCount={isSearching ? filteredLinks.length : displayCategories.reduce((sum, cat) => sum + cat.links.length, 0)}
         totalCount={allLinks.length}
       />
       
-      {/* Quick Stats */}
-      {/* <QuickStats data={linksData.metadata} /> */}
-      
-      {/* Featured Links */}
-      <FeaturedLinks links={filteredLinks} />
-      
-      {/* Category Grid */}
-      {/* <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Find all the important links and resources organized by category for easy access.
-            </p>
-          </div>
-          <CategoryGrid categories={categories} />
-        </div>
-      </section> */}
+      {/* Links Display */}
+      {isSearching ? (
+        // When text searching: show flat list of results
+        <FeaturedLinks links={filteredLinks} />
+      ) : (
+        // Otherwise: show categorized view (with optional category/dubai filter applied)
+        <CategorizedLinks categories={displayCategories} />
+      )}
     </div>
   );
 }

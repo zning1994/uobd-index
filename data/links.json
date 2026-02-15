@@ -1,25 +1,11 @@
 {
   "categories": [
     {
-      "id": "main-websites",
-      "title": "Main Websites",
-      "description": "Essential UoB portals and services",
-      "icon": "globe",
+      "id": "academic-learning",
+      "title": "Academic & Learning",
+      "description": "Learning resources, library, and academic tools",
+      "icon": "book-open",
       "links": [
-        {
-          "id": "gradintelligence",
-          "title": "Gradintelligence",
-          "url": "https://gradintelligence.com/",
-          "description": "Gradintelligence allows you to track your academic documents (degree certificate, transcript, etc).",
-          "tags": ["portal", "academic", "essential", "gradintelligence", "graduation"]
-        },
-        {
-          "id": "myuob",
-          "title": "MyUoB",
-          "url": "https://myuob.bham.ac.uk/",
-          "description": "Student portal for academic information and services",
-          "tags": ["portal", "academic", "essential"]
-        },
         {
           "id": "canvas",
           "title": "Canvas",
@@ -49,18 +35,26 @@
           "isDubaiSpecific": true
         },
         {
-          "id": "careers-connect",
-          "title": "Careers Connect",
-          "url": "https://bham.targetconnect.net/student/home.html",
-          "description": "Career services and job opportunities",
-          "tags": ["careers", "jobs", "professional"]
-        },
+          "id": "course-administration",
+          "title": "Course and Module Administration",
+          "url": "https://intranet.birmingham.ac.uk/student/digital-services/administration.aspx",
+          "description": "Course and module administrative tools",
+          "tags": ["administration", "course", "module"]
+        }
+      ]
+    },
+    {
+      "id": "student-services",
+      "title": "Student Services",
+      "description": "Student portals and essential services",
+      "icon": "graduation-cap",
+      "links": [
         {
-          "id": "verify-platform",
-          "title": "Verify Platform (Out of date)",
-          "url": "https://verify.bham.ac.uk/",
-          "description": "Identity verification services",
-          "tags": ["verification", "identity", "security"]
+          "id": "myuob",
+          "title": "MyUoB",
+          "url": "https://myuob.bham.ac.uk/",
+          "description": "Student portal for academic information and services",
+          "tags": ["portal", "academic", "essential"]
         },
         {
           "id": "student-gateway",
@@ -68,6 +62,13 @@
           "url": "https://student-gateway.bham.ac.uk/",
           "description": "Central hub for student services",
           "tags": ["portal", "services", "student"]
+        },
+        {
+          "id": "gradintelligence",
+          "title": "Gradintelligence",
+          "url": "https://gradintelligence.com/",
+          "description": "Gradintelligence allows you to track your academic documents (degree certificate, transcript, etc).",
+          "tags": ["portal", "academic", "essential", "gradintelligence", "graduation"]
         },
         {
           "id": "student-documents",
@@ -79,9 +80,24 @@
       ]
     },
     {
-      "id": "it-services",
-      "title": "IT Services",
-      "description": "Technical support and IT resources",
+      "id": "career-development",
+      "title": "Career Development",
+      "description": "Career services and professional resources",
+      "icon": "briefcase",
+      "links": [
+        {
+          "id": "careers-connect",
+          "title": "Careers Connect",
+          "url": "https://bham.targetconnect.net/student/home.html",
+          "description": "Career services and job opportunities",
+          "tags": ["careers", "jobs", "professional"]
+        }
+      ]
+    },
+    {
+      "id": "it-digital",
+      "title": "IT & Digital Services",
+      "description": "Technical support, IT resources, and digital tools",
       "icon": "monitor",
       "links": [
         {
@@ -92,40 +108,18 @@
           "tags": ["support", "it", "help"]
         },
         {
-          "id": "off-site-working",
-          "title": "Off-Site Working Guide",
-          "url": "https://universityofbirmingham.service-now.com/itportal/?id=uob_kb_article&sys_id=f6d495b61bf9c9107bc4a609b04bcbbb",
-          "description": "Introduction to remote working services",
-          "tags": ["remote", "guide", "it"]
-        },
-        {
           "id": "remote-access",
           "title": "Remote Access",
           "url": "https://remoteaccess.bham.ac.uk/",
           "description": "Access university systems remotely",
           "tags": ["remote", "vpn", "access"]
-        }
-      ]
-    },
-    {
-      "id": "intranet",
-      "title": "UoB Intranet",
-      "description": "Internal university resources and services",
-      "icon": "building",
-      "links": [
-        {
-          "id": "main-intranet",
-          "title": "UoB Intranet",
-          "url": "https://intranet.birmingham.ac.uk/",
-          "description": "Main university intranet portal",
-          "tags": ["intranet", "internal", "portal"]
         },
         {
-          "id": "library-services",
-          "title": "Library Services",
-          "url": "https://intranet.birmingham.ac.uk/as/libraryservices/library/index.aspx",
-          "description": "Library services and resources",
-          "tags": ["library", "services", "academic"]
+          "id": "off-site-working",
+          "title": "Off-Site Working Guide",
+          "url": "https://universityofbirmingham.service-now.com/itportal/?id=uob_kb_article&sys_id=f6d495b61bf9c9107bc4a609b04bcbbb",
+          "description": "Introduction to remote working services",
+          "tags": ["remote", "guide", "it"]
         },
         {
           "id": "digital-services",
@@ -135,18 +129,18 @@
           "tags": ["digital", "services", "student"]
         },
         {
-          "id": "course-administration",
-          "title": "Course and Module Administration",
-          "url": "https://intranet.birmingham.ac.uk/student/digital-services/administration.aspx",
-          "description": "Course and module administrative tools",
-          "tags": ["administration", "course", "module"]
+          "id": "verify-platform",
+          "title": "Verify Platform (Out of date)",
+          "url": "https://verify.bham.ac.uk/",
+          "description": "Identity verification services",
+          "tags": ["verification", "identity", "security"]
         }
       ]
     },
     {
-      "id": "accommodation",
-      "title": "Accommodation",
-      "description": "Housing and accommodation services",
+      "id": "accommodation-living",
+      "title": "Accommodation & Living",
+      "description": "Housing, transport, and campus life services",
       "icon": "home",
       "links": [
         {
@@ -188,6 +182,28 @@
           "description": "MyRiad Dubai bistro menu",
           "tags": ["food", "menu", "bistro", "dubai"],
           "isDubaiSpecific": true
+        }
+      ]
+    },
+    {
+      "id": "general-resources",
+      "title": "General Resources",
+      "description": "General university resources and information",
+      "icon": "globe",
+      "links": [
+        {
+          "id": "main-intranet",
+          "title": "UoB Intranet",
+          "url": "https://intranet.birmingham.ac.uk/",
+          "description": "Main university intranet portal",
+          "tags": ["intranet", "internal", "portal"]
+        },
+        {
+          "id": "library-services",
+          "title": "Library Services",
+          "url": "https://intranet.birmingham.ac.uk/as/libraryservices/library/index.aspx",
+          "description": "Library services and resources",
+          "tags": ["library", "services", "academic"]
         }
       ]
     }

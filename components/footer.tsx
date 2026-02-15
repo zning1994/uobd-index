@@ -75,7 +75,7 @@ export function Footer() {
                 <GraduationCap className="h-6 w-6 text-uob-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground">UoBD</h3>
+                <h3 className="font-bold text-foreground">UoB Dubai</h3>
                 <p className="text-xs text-muted-foreground">{t('footer.brandTagline')}</p>
               </div>
             </Link>

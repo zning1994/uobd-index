@@ -1,22 +1,14 @@
 {
   "zh": {
     "categories": {
-      "main-websites": { "title": "主站与门户", "description": "UoB 必备门户与服务" },
-      "it-services": { "title": "IT 服务", "description": "技术支持与 IT 资源" },
-      "intranet": { "title": "内联网", "description": "校内资源与服务" },
-      "accommodation": { "title": "住宿", "description": "住宿与生活服务" }
+      "academic-learning": { "title": "学术与学习", "description": "学习资源、图书馆和学术工具" },
+      "student-services": { "title": "学生服务", "description": "学生门户和必备服务" },
+      "career-development": { "title": "职业发展", "description": "职业服务和专业资源" },
+      "it-digital": { "title": "IT 与数字服务", "description": "技术支持、IT 资源和数字工具" },
+      "accommodation-living": { "title": "住宿与生活", "description": "住宿、交通和校园生活服务" },
+      "general-resources": { "title": "综合资源", "description": "大学通用资源和信息" }
     },
     "links": {
-      "gradintelligence": {
-        "title": "Gradintelligence",
-        "description": "Gradintelligence 可用于查看与跟踪你的学术文档（学位证书、成绩单等）",
-        "tags": ["门户", "学术", "必备", "毕业", "文档"]
-      },
-      "myuob": {
-        "title": "MyUoB",
-        "description": "学术信息与服务的学生门户",
-        "tags": ["门户", "学术", "必备"]
-      },
       "canvas": {
         "title": "Canvas 学习平台",
         "description": "学习管理系统",
@@ -32,40 +24,60 @@
         "description": "迪拜校区课程时间表",
         "tags": ["课表", "迪拜", "时间表"]
       },
-      "careers-connect": {
-        "title": "职业发展",
-        "description": "职业服务与就业机会",
-        "tags": ["职业", "就业", "发展"]
+      "course-administration": {
+        "title": "课程与模块管理",
+        "description": "课程与模块相关管理工具",
+        "tags": ["管理", "课程", "模块"]
       },
-      "verify-platform": {
-        "title": "核验平台（已过期）",
-        "description": "身份核验服务",
-        "tags": ["核验", "身份", "安全"]
+      "myuob": {
+        "title": "MyUoB",
+        "description": "学术信息与服务的学生门户",
+        "tags": ["门户", "学术", "必备"]
       },
       "student-gateway": {
         "title": "学生服务门户",
         "description": "学生服务中央入口",
         "tags": ["门户", "服务", "学生"]
       },
+      "gradintelligence": {
+        "title": "Gradintelligence",
+        "description": "Gradintelligence 可用于查看与跟踪你的学术文档（学位证书、成绩单等）",
+        "tags": ["门户", "学术", "必备", "毕业", "文档"]
+      },
       "student-documents": {
         "title": "学生与校友文档",
         "description": "通过 Gradintelligence 获取学生与校友文档的指引",
         "tags": ["门户", "学术", "学生", "校友", "文档"]
+      },
+      "careers-connect": {
+        "title": "职业发展",
+        "description": "职业服务与就业机会",
+        "tags": ["职业", "就业", "发展"]
       },
       "it-service-desk": {
         "title": "IT 服务台",
         "description": "技术支持与 IT 帮助",
         "tags": ["支持", "IT", "帮助"]
       },
+      "remote-access": {
+        "title": "远程访问",
+        "description": "远程访问学校系统",
+        "tags": ["远程", "VPN", "访问"]
+      },
       "off-site-working": {
         "title": "远程办公指南",
         "description": "远程办公相关服务指引",
         "tags": ["远程", "指南", "IT"]
       },
-      "remote-access": {
-        "title": "远程访问",
-        "description": "远程访问学校系统",
-        "tags": ["远程", "VPN", "访问"]
+      "digital-services": {
+        "title": "学生数字服务",
+        "description": "面向学生的数字工具与服务",
+        "tags": ["数字", "服务", "学生"]
+      },
+      "verify-platform": {
+        "title": "核验平台（已过期）",
+        "description": "身份核验服务",
+        "tags": ["核验", "身份", "安全"]
       },
       "main-intranet": {
         "title": "UoB 内联网",
@@ -76,16 +88,6 @@
         "title": "图书馆服务",
         "description": "图书馆服务与资源",
         "tags": ["图书馆", "服务", "学术"]
-      },
-      "digital-services": {
-        "title": "学生数字服务",
-        "description": "面向学生的数字工具与服务",
-        "tags": ["数字", "服务", "学生"]
-      },
-      "course-administration": {
-        "title": "课程与模块管理",
-        "description": "课程与模块相关管理工具",
-        "tags": ["管理", "课程", "模块"]
       },
       "myriad-linktree": {
         "title": "MyRiad 住户入口",
@@ -116,22 +118,14 @@
   },
   "ar": {
     "categories": {
-      "main-websites": { "title": "المواقع الرئيسية", "description": "بوابات وخدمات UoB الأساسية" },
-      "it-services": { "title": "خدمات تقنية المعلومات", "description": "الدعم الفني وموارد تقنية المعلومات" },
-      "intranet": { "title": "الإنترانت", "description": "موارد وخدمات الجامعة الداخلية" },
-      "accommodation": { "title": "السكن", "description": "خدمات السكن والحياة اليومية" }
+      "academic-learning": { "title": "الأكاديمية والتعلم", "description": "موارد التعلم والمكتبة والأدوات الأكاديمية" },
+      "student-services": { "title": "خدمات الطلاب", "description": "بوابات الطلاب والخدمات الأساسية" },
+      "career-development": { "title": "التطوير المهني", "description": "خدمات المهن والموارد المهنية" },
+      "it-digital": { "title": "تقنية المعلومات والخدمات الرقمية", "description": "الدعم الفني وموارد تقنية المعلومات والأدوات الرقمية" },
+      "accommodation-living": { "title": "السكن والحياة", "description": "الإسكان والنقل وخدمات الحياة الجامعية" },
+      "general-resources": { "title": "الموارد العامة", "description": "موارد الجامعة العامة والمعلومات" }
     },
     "links": {
-      "gradintelligence": {
-        "title": "Gradintelligence",
-        "description": "تتيح لك Gradintelligence متابعة مستنداتك الأكاديمية (شهادة التخرج، الكشف، وغيرها)",
-        "tags": ["بوابة", "أكاديمي", "أساسي", "تخرج", "مستندات"]
-      },
-      "myuob": {
-        "title": "MyUoB",
-        "description": "بوابة الطلاب للمعلومات والخدمات الأكاديمية",
-        "tags": ["بوابة", "أكاديمي", "أساسي"]
-      },
       "canvas": {
         "title": "منصة Canvas",
         "description": "نظام إدارة التعلم",
@@ -147,40 +141,60 @@
         "description": "الجداول الدراسية لفرع دبي",
         "tags": ["جدول", "دبي", "مواعيد"]
       },
-      "careers-connect": {
-        "title": "التوظيف والوظائف",
-        "description": "خدمات المهن وفرص العمل",
-        "tags": ["مهن", "وظائف", "تطوير"]
+      "course-administration": {
+        "title": "إدارة المقررات والوحدات",
+        "description": "أدوات الإدارة للمقررات والوحدات",
+        "tags": ["إدارة", "مقرر", "وحدة"]
       },
-      "verify-platform": {
-        "title": "منصة التحقق (قديمة)",
-        "description": "خدمات التحقق من الهوية",
-        "tags": ["تحقق", "هوية", "أمان"]
+      "myuob": {
+        "title": "MyUoB",
+        "description": "بوابة الطلاب للمعلومات والخدمات الأكاديمية",
+        "tags": ["بوابة", "أكاديمي", "أساسي"]
       },
       "student-gateway": {
         "title": "بوابة الطالب",
         "description": "المركز الرئيسي لخدمات الطلاب",
         "tags": ["بوابة", "خدمات", "طالب"]
       },
+      "gradintelligence": {
+        "title": "Gradintelligence",
+        "description": "تتيح لك Gradintelligence متابعة مستنداتك الأكاديمية (شهادة التخرج، الكشف، وغيرها)",
+        "tags": ["بوابة", "أكاديمي", "أساسي", "تخرج", "مستندات"]
+      },
       "student-documents": {
         "title": "مستندات الطلاب والخريجين",
         "description": "إرشادات الحصول على مستندات الطلاب والخريجين عبر Gradintelligence",
         "tags": ["بوابة", "أكاديمي", "طالب", "خريج", "مستندات"]
+      },
+      "careers-connect": {
+        "title": "التوظيف والوظائف",
+        "description": "خدمات المهن وفرص العمل",
+        "tags": ["مهن", "وظائف", "تطوير"]
       },
       "it-service-desk": {
         "title": "مكتب خدمة تقنية المعلومات",
         "description": "الدعم الفني والمساعدة التقنية",
         "tags": ["دعم", "تقنية المعلومات", "مساعدة"]
       },
+      "remote-access": {
+        "title": "الوصول عن بُعد",
+        "description": "الوصول إلى أنظمة الجامعة عن بُعد",
+        "tags": ["عن بُعد", "VPN", "وصول"]
+      },
       "off-site-working": {
         "title": "دليل العمل عن بُعد",
         "description": "مقدمة عن خدمات العمل عن بُعد",
         "tags": ["عن بُعد", "دليل", "تقنية المعلومات"]
       },
-      "remote-access": {
-        "title": "الوصول عن بُعد",
-        "description": "الوصول إلى أنظمة الجامعة عن بُعد",
-        "tags": ["عن بُعد", "VPN", "وصول"]
+      "digital-services": {
+        "title": "الخدمات الرقمية للطلاب",
+        "description": "أدوات وخدمات رقمية للطلاب",
+        "tags": ["رقمي", "خدمات", "طالب"]
+      },
+      "verify-platform": {
+        "title": "منصة التحقق (قديمة)",
+        "description": "خدمات التحقق من الهوية",
+        "tags": ["تحقق", "هوية", "أمان"]
       },
       "main-intranet": {
         "title": "إنترانت UoB",
@@ -191,16 +205,6 @@
         "title": "خدمات المكتبة",
         "description": "خدمات وموارد المكتبة",
         "tags": ["مكتبة", "خدمات", "أكاديمي"]
-      },
-      "digital-services": {
-        "title": "الخدمات الرقمية للطلاب",
-        "description": "أدوات وخدمات رقمية للطلاب",
-        "tags": ["رقمي", "خدمات", "طالب"]
-      },
-      "course-administration": {
-        "title": "إدارة المقررات والوحدات",
-        "description": "أدوات الإدارة للمقررات والوحدات",
-        "tags": ["إدارة", "مقرر", "وحدة"]
       },
       "myriad-linktree": {
         "title": "مدخل MyRiad",
@@ -230,5 +234,3 @@
     }
   }
 }
-
-

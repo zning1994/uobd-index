@@ -42,7 +42,7 @@ export function Header() {
                 <GraduationCap className="h-6 w-6 text-uob-primary" />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-lg font-bold text-foreground">UoBD</h1>
+                <h1 className="text-lg font-bold text-foreground">UoB Dubai</h1>
                 <p className="text-xs text-muted-foreground">{t('hero.title').split(' ').slice(-2).join(' ')}</p>
               </div>
             </motion.div>

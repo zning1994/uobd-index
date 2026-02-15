@@ -92,8 +92,8 @@ export interface Translations {
 export const translations: Record<Locale, Translations> = {
   en: {
     // Meta
-    'meta.title': 'UoBD Important Websites',
-    'meta.description': 'Curated links and resources for University of Birmingham Dubai.',
+    'meta.title': 'University of Birmingham Dubai Important Websites',
+    'meta.description': 'Curated links and resources for University of Birmingham Dubai campus students and staff.',
     // Header
     'header.home': 'Home',
     'header.categories': 'Categories',
@@ -102,8 +102,8 @@ export const translations: Record<Locale, Translations> = {
     'header.search': 'Search',
     
     // Hero Section
-    'hero.title': 'UoBD Important Websites',
-    'hero.subtitle': 'Essential University of Birmingham Dubai related services and resources (study, campus, accommodation, restaurants, etc)',
+    'hero.title': 'University of Birmingham Dubai Important Websites',
+    'hero.subtitle': 'Essential services and resources for University of Birmingham Dubai campus students (study, campus, accommodation, restaurants, etc)',
     'hero.searchPlaceholder': 'Search links, services, or categories...',
     'hero.allCategories': 'All Categories',
     'hero.dubaiOnly': 'Dubai Only',
@@ -122,10 +122,10 @@ export const translations: Record<Locale, Translations> = {
     'about.title': 'About Us',
     'about.subtitle': 'A comprehensive link navigation platform designed for University of Birmingham Dubai campus students and staff. Making academic life simpler with essential resources at your fingertips.',
     'about.whyChoose': 'Why Choose Us?',
-    'about.whyChooseSubtitle': 'An intelligent navigation platform designed specifically for UoB Dubai students',
+    'about.whyChooseSubtitle': 'An intelligent navigation platform designed specifically for University of Birmingham Dubai campus students',
     'about.mission': 'Our Mission',
     'about.missionText1': 'At University of Birmingham Dubai campus, students need to access numerous different systems and resources. From academic portals to accommodation services, from library resources to IT support, important links are scattered across different places.',
-    'about.missionText2': 'UoBD Important Websites was created to solve this problem. We organize all important links in one place, allowing students to quickly find the resources they need and focus on learning rather than wasting time searching for the right URLs.',
+    'about.missionText2': 'University of Birmingham Dubai Important Websites was created to solve this problem. We organize all important links in one place, allowing students to quickly find the resources they need and focus on learning rather than wasting time searching for the right URLs.',
     'about.missionText3': 'Especially for Dubai campus students, we also provide localized resources including transport timetables, accommodation services, restaurant menus, and other practical information.',
     'about.tech': 'Technical Implementation',
     'about.techSubtitle': 'Modern technology stack ensuring the best user experience',
@@ -160,7 +160,7 @@ export const translations: Record<Locale, Translations> = {
     
     // Footer
     'footer.madeWith': 'Made with',
-    'footer.for': 'for UoB Dubai students',
+    'footer.for': 'for University of Birmingham Dubai students',
     'footer.brandTagline': 'Important Websites',
     'footer.description': 'Curated links and resources for University of Birmingham Dubai campus students and staff. Making academic life easier, one click at a time.',
     'footer.location': 'Dubai, UAE',
@@ -170,13 +170,13 @@ export const translations: Record<Locale, Translations> = {
     'footer.online': 'Online',
     'footer.joinCommunity': 'Join Community',
     'footer.wechat': 'WeChat Contact',
-    'footer.wechatDesc': 'Scan the QR code to add on WeChat. After verification you will be invited to the UoBD students group.',
+    'footer.wechatDesc': 'Scan the QR code to add on WeChat. After verification you will be invited to the University of Birmingham Dubai students group.',
     'footer.whatsapp': 'WhatsApp Group',
-    'footer.whatsappDesc': 'Tap to join the UoBD students WhatsApp group directly.',
+    'footer.whatsappDesc': 'Tap to join the University of Birmingham Dubai students WhatsApp group directly.'
   },
   zh: {
     // Meta
-    'meta.title': 'UoBD 重要网站',
+    'meta.title': '伯明翰大学迪拜校区重要网站',
     'meta.description': '伯明翰大学迪拜校区的重要链接与资源导航。',
     // Header
     'header.home': '首页',
@@ -186,8 +186,8 @@ export const translations: Record<Locale, Translations> = {
     'header.search': '搜索',
     
     // Hero Section
-    'hero.title': 'UoBD 重要网站',
-    'hero.subtitle': '伯明翰大学迪拜校区相关的重要服务和资源（学习、校园、住宿、餐厅等）',
+    'hero.title': '伯明翰大学迪拜校区重要网站',
+    'hero.subtitle': '伯明翰大学迪拜校区学生必备的重要服务和资源（学习、校园、住宿、餐厅等）',
     'hero.searchPlaceholder': '搜索链接、服务或分类...',
     'hero.allCategories': '所有分类',
     'hero.dubaiOnly': '仅迪拜',
@@ -206,10 +206,10 @@ export const translations: Record<Locale, Translations> = {
     'about.title': '关于我们',
     'about.subtitle': '为伯明翰大学迪拜校区学生和教职工打造的综合链接导航平台。让学术生活更简单，重要资源触手可及。',
     'about.whyChoose': '为什么选择我们？',
-    'about.whyChooseSubtitle': '专为 UoB 迪拜学生设计的智能导航平台',
+    'about.whyChooseSubtitle': '专为伯明翰大学迪拜校区学生设计的智能导航平台',
     'about.mission': '我们的使命',
     'about.missionText1': '在伯明翰大学迪拜校区，学生需要访问众多不同的系统和资源。从学术门户到住宿服务，从图书馆资源到 IT 支持，重要的链接分散在各个地方。',
-    'about.missionText2': 'UoBD 重要网站的诞生就是为了解决这个问题。我们将所有重要的链接整理在一个地方，让学生能够快速找到所需的资源，专注于学习而不是浪费时间寻找正确的网址。',
+    'about.missionText2': '伯明翰大学迪拜校区重要网站的诞生就是为了解决这个问题。我们将所有重要的链接整理在一个地方，让学生能够快速找到所需的资源，专注于学习而不是浪费时间寻找正确的网址。',
     'about.missionText3': '特别是对于迪拜校区的学生，我们还提供了本地化的资源，包括交通时刻表、住宿服务、餐厅菜单等实用信息。',
     'about.tech': '技术实现',
     'about.techSubtitle': '现代化的技术栈，确保最佳的用户体验',
@@ -244,7 +244,7 @@ export const translations: Record<Locale, Translations> = {
     
     // Footer
     'footer.madeWith': '用',
-    'footer.for': '为 UoB 迪拜学生制作',
+    'footer.for': '为伯明翰大学迪拜校区学生制作',
     'footer.brandTagline': '重要网站',
     'footer.description': '为伯明翰大学迪拜校区的师生整理的链接与资源，让学习生活更高效。',
     'footer.location': '迪拜，阿联酋',
@@ -254,13 +254,13 @@ export const translations: Record<Locale, Translations> = {
     'footer.online': '在线',
     'footer.joinCommunity': '加入社区',
     'footer.wechat': '微信联系',
-    'footer.wechatDesc': '扫码添加微信，验证后邀请加入 UoBD 留学生群。',
+    'footer.wechatDesc': '扫码添加微信，验证后邀请加入伯明翰大学迪拜校区学生群。',
     'footer.whatsapp': 'WhatsApp 群组',
-    'footer.whatsappDesc': '点击直接加入 UoBD 学生 WhatsApp 群。',
+    'footer.whatsappDesc': '点击直接加入伯明翰大学迪拜校区学生 WhatsApp 群。'
   },
   ar: {
     // Meta
-    'meta.title': 'مواقع UoBD المهمة',
+    'meta.title': 'مواقع جامعة برمنغهام دبي المهمة',
     'meta.description': 'روابط وموارد مُنسّقة لجامعة برمنغهام فرع دبي.',
     // Header
     'header.home': 'الرئيسية',
@@ -270,8 +270,8 @@ export const translations: Record<Locale, Translations> = {
     'header.search': 'بحث',
 
     // Hero Section
-    'hero.title': 'مواقع UoBD المهمة',
-    'hero.subtitle': 'خدمات وموارد أساسية لجامعة برمنغهام فرع دبي (الدراسة، الحرم الجامعي، السكن، المطاعم وغيرها)',
+    'hero.title': 'مواقع جامعة برمنغهام دبي المهمة',
+    'hero.subtitle': 'خدمات وموارد أساسية لطلاب جامعة برمنغهام فرع دبي (الدراسة، الحرم الجامعي، السكن، المطاعم وغيرها)',
     'hero.searchPlaceholder': 'ابحث عن الروابط أو الخدمات أو التصنيفات...',
     'hero.allCategories': 'كل التصنيفات',
     'hero.dubaiOnly': 'فرع دبي فقط',
@@ -293,7 +293,7 @@ export const translations: Record<Locale, Translations> = {
     'about.whyChooseSubtitle': 'منصة ذكية مصممة خصيصاً لطلاب فرع دبي',
     'about.mission': 'مهمتنا',
     'about.missionText1': 'يحتاج الطلاب في فرع دبي للوصول إلى العديد من الأنظمة والموارد المختلفة. من بوابات الدراسة إلى خدمات السكن، ومن موارد المكتبة إلى دعم تقنية المعلومات.',
-    'about.missionText2': 'تجمع مواقع UoBD المهمة كل الروابط الأساسية في مكان واحد ليوفر وقتك ويُسهِّل الوصول.',
+    'about.missionText2': 'تجمع مواقع جامعة برمنغهام دبي المهمة كل الروابط الأساسية في مكان واحد ليوفر وقتك ويُسهِّل الوصول.',
     'about.missionText3': 'كما نوفر موارد محلية خاصة بفرع دبي مثل الجداول الزمنية والمواصلات وخدمات السكن وقوائم المطاعم.',
     'about.tech': 'التنفيذ التقني',
     'about.techSubtitle': 'تقنيات حديثة لضمان أفضل تجربة استخدام',
@@ -338,9 +338,9 @@ export const translations: Record<Locale, Translations> = {
     'footer.online': 'متصل',
     'footer.joinCommunity': 'انضم إلى المجتمع',
     'footer.wechat': 'التواصل عبر WeChat',
-    'footer.wechatDesc': 'امسح رمز QR لإضافتي على WeChat. بعد التحقق سيتم دعوتك إلى مجموعة طلاب UoBD.',
+    'footer.wechatDesc': 'امسح رمز QR لإضافتي على WeChat. بعد التحقق سيتم دعوتك إلى مجموعة طلاب جامعة برمنغهام دبي.',
     'footer.whatsapp': 'مجموعة WhatsApp',
-    'footer.whatsappDesc': 'اضغط للانضمام مباشرة إلى مجموعة طلاب UoBD على WhatsApp.',
+    'footer.whatsappDesc': 'اضغط للانضمام مباشرة إلى مجموعة طلاب جامعة برمنغهام دبي على WhatsApp.'
   },
 };
 
