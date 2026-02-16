@@ -15,8 +15,7 @@ import {
   Mail
 } from 'lucide-react';
 import { useI18n } from '@/components/i18n-provider';
-
-// Metadata will be handled in layout or parent component
+import { PageSeo } from '@/components/page-seo';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -80,6 +79,11 @@ export default function AboutPage() {
 
   return (
     <>
+      <PageSeo 
+        title={t('about.title') + ' - University of Birmingham Dubai Important Websites'}
+        description={t('about.subtitle')}
+        path="/about"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,10 +1,10 @@
 'use client';
 
 import { useI18n } from './i18n-provider';
-import { locales, defaultLocale, type Locale } from '@/lib/i18n';
+import { locales, type Locale } from '@/lib/i18n';
 
 const siteUrl = 'https://uobd.inology.tech';
-const ogImage = `${siteUrl}/og-image.png`;
+const defaultOgImage = `${siteUrl}/og-image.png`;
 
 // Locale to OG locale mapping
 const ogLocales: Record<Locale, string> = {
@@ -13,18 +13,33 @@ const ogLocales: Record<Locale, string> = {
   ar: 'ar_SA',
 };
 
-export function MetaI18n() {
+interface PageSeoProps {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  path?: string;
+}
+
+export function PageSeo({ 
+  title, 
+  description, 
+  ogImage = defaultOgImage,
+  path = '' 
+}: PageSeoProps) {
   const { t, locale } = useI18n();
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : siteUrl;
+  
+  const pageTitle = title || t('meta.title');
+  const pageDescription = description || t('meta.description');
+  const pageUrl = path ? `${siteUrl}${path}` : siteUrl;
   
   return (
     <>
       {/* Basic Meta */}
-      <title>{t('meta.title')}</title>
-      <meta name="description" content={t('meta.description')} />
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDescription} />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={siteUrl} />
+      <link rel="canonical" href={pageUrl} />
       
       {/* Hreflang tags for multilingual SEO */}
       {locales.map((loc) => (
@@ -32,18 +47,18 @@ export function MetaI18n() {
           key={loc}
           rel="alternate" 
           hrefLang={loc} 
-          href={siteUrl} 
+          href={pageUrl} 
         />
       ))}
       {/* x-default for users with unsupported languages */}
-      <link rel="alternate" hrefLang="x-default" href={siteUrl} />
+      <link rel="alternate" hrefLang="x-default" href={pageUrl} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={currentUrl} />
+      <meta property="og:url" content={pageUrl} />
       <meta property="og:site_name" content="University of Birmingham Dubai Important Websites" />
-      <meta property="og:title" content={t('meta.title')} />
-      <meta property="og:description" content={t('meta.description')} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -51,17 +66,9 @@ export function MetaI18n() {
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@uobdubai" />
-      <meta name="twitter:title" content={t('meta.title')} />
-      <meta name="twitter:description" content={t('meta.description')} />
+      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#1e3a8a" />
-      <meta name="msapplication-TileColor" content="#1e3a8a" />
-      
-      {/* JSON-LD Structured Data is in layout.tsx */}
     </>
   );
 }
